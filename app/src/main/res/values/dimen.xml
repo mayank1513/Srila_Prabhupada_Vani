@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="tool_bar_height">50dp</dimen>
+    <dimen name="status_bar_height">0dp</dimen>
+    <dimen name="r_drawer_width">250dp</dimen>
+    <dimen name="drawerWidth">280dp</dimen>
+    <dimen name="drawerWidth1">320dp</dimen>
+    <dimen name="headerHeight">230dp</dimen>
+    <dimen name="headerHeight1">310dp</dimen>
+    <dimen name="bottomDrawerHeight">240dp</dimen>
+    <dimen name="musicControlHeight">65dp</dimen>
+    <dimen name="bottomMargin">50dp</dimen>
+    <dimen name="bottomDrawerInitialMargin">-180dp</dimen>
+
+    <dimen name="vedabase_top_margine">250dp</dimen>
+    <dimen name="normal_height">65dp</dimen>
+    <dimen name="expanded_height">90dp</dimen>
+</resources>

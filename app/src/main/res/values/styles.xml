@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Holo.NoActionBar.TranslucentDecor">
+        <item name="android:textColor">#b2ff59</item>
+    </style>
+
+    <style name="AppLightTheme" parent="android:Theme.Holo.Light.NoActionBar.TranslucentDecor" />
+</resources>

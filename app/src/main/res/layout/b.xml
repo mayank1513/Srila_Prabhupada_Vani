@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/musicControlHeight">
+
+    <View
+        android:layout_width="3000dp"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/musicControls"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_top_shadow">
+
+        <ImageView
+            android:id="@+id/arte_"
+            android:layout_width="@dimen/musicControlHeight"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/album_arte"
+            android:paddingEnd="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sp1"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/musicControlHeight"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="28dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="serif"
+            android:gravity="start"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:shadowColor="@android:color/holo_red_light"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="8"
+            android:singleLine="true"
+            android:text="@string/srila_prabhupada"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/artist1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/musicControlHeight"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="8dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="serif"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:shadowColor="@android:color/holo_red_light"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="8"
+            android:singleLine="true"
+            android:text="@string/srila_prabhupada"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <ImageButton
+            android:id="@+id/playPause1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_margin="5dp"
+            android:background="@drawable/ripple"
+            android:contentDescription="@string/play_pause_button"
+            android:onClick="onClick"
+            android:paddingTop="5dp"
+            android:src="@android:drawable/ic_media_play"
+            android:tint="@color/colorAccent" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/ui_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="@drawable/bg_bottom_grad"
+        tools:ignore="ContentDescription">
+
+        <ImageView
+            android:id="@+id/blurredArte"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sp1" />
+
+        <ImageView
+            android:id="@+id/blurredArte_"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/c1" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottomDrawerHeight"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/date_place_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_marginBottom="90dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/author_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="90dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:padding="3dp"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/title_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="110dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="@string/mahamantra1"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <ImageButton
+                android:id="@+id/like_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="48dp"
+                android:layout_marginBottom="67dp"
+                android:background="@drawable/ripple"
+                android:onClick="onClick"
+                android:src="@drawable/thumb_pink"
+                android:tint="@color/colorAccent" />
+
+            <ImageButton
+                android:id="@+id/shuffle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="67dp"
+                android:background="@drawable/ripple"
+                android:onClick="onClick"
+                android:src="@drawable/ic_shuffle_black_24dp"
+                android:tint="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/artist_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginStart="80dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginBottom="67dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="serif"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="@string/mahamantra1"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="47dp"
+                android:layout_marginBottom="67dp"
+                android:background="@drawable/ripple"
+                android:onClick="onClick"
+                android:scaleX="-1"
+                android:src="@drawable/ic_reply_black_24dp"
+                android:tint="@color/colorAccent" />
+
+            <ImageButton
+                android:id="@+id/repeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="13dp"
+                android:layout_marginBottom="67dp"
+                android:background="@drawable/ripple"
+                android:onClick="onClick"
+                android:src="@drawable/ic_repeat_black_24dp"
+                android:tint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/progress"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="35dp"
+                android:gravity="end"
+                android:singleLine="true"
+                android:textColor="@android:color/white" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="55dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginEnd="55dp"
+                android:layout_marginRight="55dp"
+                android:layout_marginBottom="28dp" />
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="35dp"
+                android:textColor="@android:color/white" />
+
+            <LinearLayout
+                android:id="@+id/btns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/prev"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple"
+                    android:onClick="onClick"
+                    android:src="@android:drawable/ic_media_previous"
+                    android:tint="@color/colorAccent" />
+
+                <ImageButton
+                    android:id="@+id/revert"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple"
+                    android:onClick="onClick"
+                    android:src="@android:drawable/ic_media_rew"
+                    android:tint="@color/colorAccent" />
+
+                <ImageButton
+                    android:id="@+id/playPause"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple"
+                    android:onClick="onClick"
+                    android:src="@android:drawable/ic_media_play"
+                    android:tint="@color/colorAccent" />
+
+                <ImageButton
+                    android:id="@+id/forward"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple"
+                    android:onClick="onClick"
+                    android:src="@android:drawable/ic_media_ff"
+                    android:tint="@color/colorAccent" />
+
+                <ImageButton
+                    android:id="@+id/next"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple"
+                    android:onClick="onClick"
+                    android:src="@android:drawable/ic_media_next"
+                    android:tint="@color/colorAccent" />
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+</FrameLayout>

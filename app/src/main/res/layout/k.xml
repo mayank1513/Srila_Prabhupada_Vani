@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a800">
+
+    <View
+        android:id="@+id/s_bar"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/statusBarColor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:background="#800"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/mahamantra1"
+        android:textAlignment="center"
+        android:textColor="#b2ff59"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="H\nA\nR\nE\n\nK\nR\nI\nS\nH\nN\nA"
+        android:textColor="#b2ff59"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:text="H\nA\nR\nE\n\nK\nR\nI\nS\nH\nN\nA"
+        android:textColor="#b2ff59"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <include
+        android:id="@+id/h"
+        layout="@layout/h"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/download_manager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="onClick"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="180dp"
+            android:background="@android:color/holo_red_dark"
+            android:fontFamily="cursive"
+            android:padding="5dp"
+            android:text="Download Manager"
+            android:textAlignment="center"
+            android:textColor="#b2ff59"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <ImageButton
+            android:id="@+id/cancel_download_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="180dp"
+            android:background="@android:color/transparent"
+            android:onClick="onClick"
+            android:padding="4dp"
+            android:src="@drawable/x" />
+
+        <ListView
+            android:id="@+id/download_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="220dp"
+            android:background="@android:color/darker_gray" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/r"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:scaleX=".1"
+        android:scaleY=".1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:padding="10dp"
+            android:shadowColor="@android:color/holo_red_light"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="8"
+            android:text="Dedicated \n\nto\n\nHis Divine Grace\nA. C. Bhakti Vedanta Swami\nPrabhupada\n\nFounder Acharya of ISKCON"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+    </FrameLayout>
+</FrameLayout>

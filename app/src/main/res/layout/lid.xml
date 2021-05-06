@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/arte"
+        android:layout_width="35dp"
+        android:layout_height="50dp"
+        android:padding="7dp"
+        android:background="@drawable/ripple"
+        android:scaleType="fitCenter"
+        android:tint="@android:color/darker_gray"
+        android:src="@drawable/music_lib" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:fontFamily="serif"
+        android:text="Library"
+        android:textColor="@android:color/darker_gray"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="serif" />
+</RelativeLayout>

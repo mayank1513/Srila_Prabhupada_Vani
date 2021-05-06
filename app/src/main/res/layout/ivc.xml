@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/volumeControls"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/songVolume"
+        android:layout_width="25dp"
+        android:layout_height="match_parent"
+        android:alpha=".2"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="150dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:background="@drawable/bg_d" />
+    <View
+        android:id="@+id/deviceVolume"
+        android:layout_width="25dp"
+        android:layout_height="match_parent"
+        android:alpha=".2"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="150dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:background="@drawable/bg_d" />
+    <TextView
+        android:id="@+id/percent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="#96000000"
+        android:gravity="center"
+        android:text="100 %"
+        android:textColor="#ffffff"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+</FrameLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fffafafa</color>
+    <color name="colorPrimaryDark">#00574b</color>
+    <color name="toolBarColor">#ff5722</color>
+    <color name="statusBarColor">#ef3712</color>
+    <!--<color name="statusBarColor">#D0ff5722</color>-->
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent1">#A0D81B60</color>
+    <color name="colorAccent2">#20F88BB0</color>
+    <color name="menuDark">#212121</color>
+    <color name="text_color">#b2ff59</color>
+</resources>

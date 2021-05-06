@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/tabs_"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:background="@color/toolBarColor"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tab1_"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple"
+            android:fontFamily="serif"
+            android:onClick="onClick"
+            android:shadowColor="@android:color/holo_red_light"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="8"
+            android:singleLine="true"
+            android:text="Albums"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/tab2_"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple"
+            android:fontFamily="serif"
+            android:onClick="onClick"
+            android:shadowColor="@android:color/holo_red_light"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="8"
+            android:text="Playlists"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/tab3_"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple"
+            android:fontFamily="serif"
+            android:onClick="onClick"
+            android:shadowColor="@android:color/holo_red_light"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="8"
+            android:text="Songs"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/divider_"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#0000FF"
+            android:scaleX=".33" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="32dp">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="3000dp" />
+
+        <ImageView
+            android:id="@+id/arte"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <v.ui.dragListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ScrollView
+            android:id="@+id/lyricsHolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lyrics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:onClick="onClick"
+                    android:shadowColor="@android:color/holo_red_light"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="8"
+                    android:text="\n\n\n\n\n\n\n\n\nLyrics not available\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <Button
+                    android:id="@+id/audio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:text="Show Songs" />
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/addPlaylist"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="7dp"
+        android:alpha="0"
+        android:background="@drawable/circular_shadow"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onClick"
+        android:rotation="45"
+        android:scaleType="fitXY"
+        android:scaleX=".1"
+        android:scaleY=".1"
+        android:src="@drawable/x"
+        android:tint="@android:color/holo_red_dark"
+        android:visibility="gone" />
+</FrameLayout>

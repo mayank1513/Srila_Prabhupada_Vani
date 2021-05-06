@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/iq"
+    android:layout_width="152dp"
+    android:layout_height="152dp"
+    android:background="@drawable/c2">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width = "34dp"
+        android:layout_height = "34dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginLeft="59dp"
+        android:layout_marginStart="59dp"
+        android:background="@drawable/ripple"
+        android:onClick="onClick"
+        android:padding="2dp"
+        android:tint="@color/colorPrimaryDark"
+        android:alpha=".2"
+        android:scaleX="2" android:scaleY="2"
+        android:scaleType="fitCenter"
+        android:src="@drawable/x" />
+
+    <ImageButton
+        android:id="@+id/preferences_btn"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginLeft="59dp"
+        android:background="@drawable/circular_shadow"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/setting" />
+
+    <ImageButton
+        android:id="@+id/cut"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="59dp"
+        android:layout_marginLeft="59dp"
+        android:background="@drawable/circular_shadow"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cut" />
+
+    <ImageButton
+        android:id="@+id/search"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="59dp"
+        android:background="@drawable/circular_shadow"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/search" />
+
+    <ImageButton
+        android:id="@+id/share"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="59dp"
+        android:background="@drawable/circular_shadow"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/send" />
+
+    <ImageButton
+        android:id="@+id/sort"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/circular_shadow"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sort" />
+
+    <ImageButton
+        android:id="@+id/bookmarks"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/circular_shadow"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bookmark_blue" />
+
+    <ImageButton
+        android:id="@+id/filter"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/circular_shadow"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/filter" />
+
+    <ImageButton
+        android:id="@+id/add_bookmark"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/circular_shadow"
+        android:backgroundTint="@color/colorPrimary"
+        android:foreground="@drawable/add"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:rotationY="180"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bookmark_blue" />
+</FrameLayout>

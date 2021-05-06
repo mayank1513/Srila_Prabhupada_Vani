@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:descendantFocusability="blocksDescendants">
+    <ImageView android:id="@+id/arte"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="1dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:src="@drawable/haribol" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight=".28"
+        android:orientation="vertical">
+        <TextView android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Bhagavad Gita"
+            android:textSize="14sp"
+            android:shadowColor="@android:color/holo_red_light"
+            android:textColor="@android:color/white"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="8"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+        <TextView android:id="@+id/album_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="viewEnd"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:shadowColor="@android:color/holo_red_light"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="8"
+            android:textStyle="italic"
+            android:gravity="end" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/list_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:src="@drawable/x"
+        android:tint="@android:color/white" />
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/arte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/bookmark" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:padding="5dp"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:typeface="serif" />
+    <TextView
+        android:id="@+id/album_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:padding="5dp"
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray"
+        android:textStyle="bold"
+        android:typeface="serif"/>
+    <ImageView
+        android:id="@+id/list_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:layout_margin="5dp"
+        android:src="@drawable/edit"
+        android:tint="@color/colorAccent" />
+</FrameLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/support_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6e3e3"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <ScrollView
+        android:id="@+id/infoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/textView2"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="180dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="2sp"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textSize="16.5sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:typeface="serif" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:lineSpacingExtra="2sp"
+        android:text="@string/app_name_with_url"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textSize="15sp"
+        android:typeface="serif" />
+</RelativeLayout>

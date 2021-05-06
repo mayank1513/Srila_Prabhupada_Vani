@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:background="@android:color/transparent">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:gravity="right|end"
+        android:fontFamily="serif"
+        android:shadowColor="@android:color/holo_blue_bright"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="20"
+        android:singleLine="true"
+        android:text="Hare Krishna"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="serif" />
+
+    <ImageView
+        android:id="@+id/arte"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:padding="7dp"
+        android:background="@drawable/ripple"
+        android:scaleType="fitCenter"
+        android:src="@drawable/music_lib" />
+</RelativeLayout>

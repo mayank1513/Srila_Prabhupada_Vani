@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/searchAll"
+        android:title="@string/search_all"/>
+    <item android:title="@string/search_for" android:checkableBehavior="all" android:id="@+id/searchFor">
+        <menu>
+            <item android:id="@+id/title"
+                android:title="@string/title"/>
+        </menu>
+    </item>
+    <group android:checkableBehavior="all" android:id="@+id/searchIn">
+        <item android:id="@+id/currentList"
+            android:title="@string/current_list"/>
+    </group>
+</menu>

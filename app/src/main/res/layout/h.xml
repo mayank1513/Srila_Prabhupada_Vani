@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:ignore="RtlCompat,ContentDescription,RtlHardcoded"
+    tools:targetApi="lollipop">
+
+    <ImageView
+        android:id="@+id/bg_arte"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <v.ui.t
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/tool_bar_height"
+        android:layout_marginBottom="@dimen/bottomMargin"
+        android:background="#100" />
+
+    <FrameLayout
+        android:id="@+id/album_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/tool_bar_height"
+        android:alpha="0"
+        android:background="#100"
+        android:scaleX=".1"
+        android:scaleY=".1"
+        android:visibility="gone">
+
+        <v.ui.t
+            android:id="@+id/holder_tab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-2dp"
+            android:layout_marginBottom="@dimen/bottomMargin" />
+
+        <TextView
+            android:id="@+id/album_name"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:background="@color/toolBarColor"
+            android:fontFamily="cursive"
+            android:gravity="bottom|center_horizontal"
+            android:onClick="onClick"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:shadowColor="@android:color/holo_red_light"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="8"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/initWifi"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/circular_shadow1"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:onClick="onClick"
+        android:padding="15dp"
+        android:scaleType="fitXY"
+        android:scaleX=".5"
+        android:scaleY=".5"
+        android:src="@drawable/wifi"
+        android:tint="@color/colorPrimary"
+        tools:targetApi="lollipop" />
+
+    <include
+        android:id="@+id/fullscreen_player"
+        layout="@layout/icf"
+        android:visibility="gone" />
+
+    <v.ui.b
+        android:id="@+id/bottom_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottomDrawerHeight"
+        android:layout_gravity="bottom" />
+
+    <GridView
+        android:id="@+id/stickers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/tool_bar_height"
+        android:background="#333"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/add_to_wa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:onClick="onClick"
+        android:text="@string/add_sticker_pack_to_whatsapp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/strProgress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/dp10"
+        android:visibility="gone" />
+
+    <v.ui.r
+        android:id="@+id/youtubeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-245dp"
+        android:visibility="gone">
+
+        <v.ui.CustomWebView
+            android:id="@+id/youtube_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/toolbarYt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#801FFF30"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/forward"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple"
+                android:onClick="onClick"
+                android:src="@drawable/forward"
+                android:tint="@color/colorAccent" />
+
+            <ImageButton
+                android:id="@+id/send"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple"
+                android:onClick="onClick"
+                android:src="@drawable/send"
+                android:tint="@color/colorAccent" />
+
+            <ImageButton
+                android:id="@+id/about"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple"
+                android:onClick="onClick"
+                android:src="@drawable/info"
+                android:tint="@color/colorAccent" />
+
+            <ImageButton
+                android:id="@+id/open_in_yt"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple"
+                android:onClick="onClick"
+                android:scaleX="1.8"
+                android:scaleY="1.8"
+                android:src="@drawable/yt" />
+
+            <ImageButton
+                android:id="@+id/refresh"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple"
+                android:onClick="onClick"
+                android:src="@drawable/refresh"
+                android:tint="@color/colorAccent" />
+        </LinearLayout>
+    </v.ui.r>
+
+    <include layout="@layout/icd" />
+
+    <include
+        android:id="@+id/t"
+        layout="@layout/t" />
+
+    <include
+        android:id="@+id/ts"
+        layout="@layout/ts"
+        android:visibility="gone" />
+
+    <v.ui.r
+        android:id="@+id/vedabase_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/vedabase_top_margine"
+        android:visibility="gone">
+
+        <v.ui.CustomWebView
+            android:id="@+id/veda_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp" />
+
+        <v.ui.CustomWebView
+            android:id="@+id/notes_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#801FFF30"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/goForward"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClick"
+                android:src="@drawable/forward"
+                android:tint="@color/colorAccent" />
+
+            <ImageButton
+                android:id="@+id/goFullScreen"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClick"
+                android:src="@drawable/fullscreen"
+                android:tint="@color/colorAccent" />
+
+            <ImageButton
+                android:id="@+id/fab_notes"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClick"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <ImageButton
+                android:id="@+id/fab_close"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClick"
+                android:src="@drawable/x"
+                android:tint="@color/colorAccent" />
+
+            <ImageButton
+                android:id="@+id/reload"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClick"
+                android:src="@drawable/refresh"
+                android:tint="@color/colorAccent" />
+        </LinearLayout>
+    </v.ui.r>
+
+    <include
+        android:id="@+id/pref"
+        layout="@layout/ip"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/searchList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/tool_bar_height"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginBottom="@dimen/musicControlHeight"
+        android:background="@color/colorPrimaryDark" />
+
+    <FrameLayout
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_d">
+
+        <v.ui.d
+            android:id="@+id/rd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right" />
+
+        <v.ui.d
+            android:id="@+id/d"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/chantWithSPFAB"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="-30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/circular_shadow"
+        android:onClick="onClick"
+        android:padding="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher_round"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/quickBall"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="-20dp"
+        android:layout_marginLeft="-20dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/circular_shadow"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher_round" />
+
+    <include
+        android:id="@+id/iq"
+        layout="@layout/iq"
+        android:layout_width="152dp"
+        android:layout_height="152dp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/wifi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/status_bar_height"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick"
+        android:visibility="gone">
+
+        <v.ui.t
+            android:id="@+id/wifiTab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/w"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:textColor="#555555"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <ImageView
+            android:id="@+id/selectAll"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/circular_shadow1"
+            android:backgroundTint="@color/toolBarColor"
+            android:onClick="onClick"
+            android:padding="3dp"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:src="@drawable/circular_shadow1"
+            android:tint="@color/colorPrimary" />
+
+        <ImageView
+            android:id="@+id/unselectAll"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/circular_shadow1"
+            android:backgroundTint="@color/colorPrimary"
+            android:onClick="onClick"
+            android:scaleX=".6"
+            android:scaleY=".6"
+            android:src="@drawable/tick"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/wifiBtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/wifiSend"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/circular_shadow1"
+                android:backgroundTint="#C0008F00"
+                android:onClick="onClick"
+                android:padding="15dp"
+                android:rotationX="180"
+                android:scaleType="fitXY"
+                android:scaleX=".5"
+                android:scaleY=".5"
+                android:src="@drawable/download"
+                android:tint="@color/colorPrimary" />
+
+            <ImageButton
+                android:id="@+id/wifiReceive"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/circular_shadow1"
+                android:backgroundTint="#C0ff5722"
+                android:onClick="onClick"
+                android:padding="15dp"
+                android:scaleType="fitXY"
+                android:scaleX=".5"
+                android:scaleY=".5"
+                android:src="@drawable/download"
+                android:tint="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wifiBtns_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="15dp"
+            android:background="@color/colorPrimary"
+            android:onClick="onClick"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent"
+                android:onClick="onClick"
+                android:src="@drawable/x" />
+
+            <TextView
+                android:id="@+id/wifiCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="1"
+                android:textColor="#555555"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/wifiSend_"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:onClick="onClick"
+                android:text="@string/send"
+                android:textColor="@color/colorPrimary"
+                android:typeface="serif" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/waiting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#95F5F5F5"
+            android:foregroundGravity="center"
+            android:onClick="onClick"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/pulse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ripple"
+                android:text="." />
+
+            <TextView
+                android:id="@+id/stat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bg_with_shadow"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="Searching for Peers...\n\nAsk your friend to tap on Receive button.\n"
+                android:textColor="#555555"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/wifi_transferring"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#50000000"
+            android:onClick="onClick"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/wifi_progress"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:padding="15dp"
+                android:text="@string/wifi_progress"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/wifiProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimaryDark" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/conn_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@android:color/holo_red_dark"
+            android:fontFamily="serif"
+            android:onClick="onClick"
+            android:text="Experimental Feature"
+            android:textAlignment="center"
+            android:textColor="#b2ff59"
+            android:textSize="12sp"
+            android:textStyle="bold|italic" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/updating_resources"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:alpha="0"
+        android:background="@android:color/holo_red_dark"
+        android:fontFamily="cursive"
+        android:onClick="onClick"
+        android:text="Updating Resources: Tap to see details..."
+        android:textAlignment="center"
+        android:textColor="#b2ff59"
+        android:textSize="12sp"
+        android:textStyle="bold|italic" />
+</FrameLayout>

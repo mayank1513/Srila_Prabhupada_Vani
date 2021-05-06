@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/black"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:onClick="onClick"
+    tools:ignore="ContentDescription">
+
+    <ImageView android:id="@+id/arte"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_d"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sp" />
+    <ImageView
+        android:src="@drawable/cf"
+        android:scaleType="fitCenter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <v.ui.t
+        android:id="@+id/fst"
+        android:layout_marginBottom="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <include layout="@layout/ivc"/>
+    <ImageButton
+        android:id="@+id/back"
+        android:onClick="onClick"
+        android:layout_margin="10dp"
+        android:src="@drawable/bk"
+        android:tint="@color/colorAccent"
+        android:background="@drawable/ripple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageButton
+        android:id="@+id/invertColor1"
+        android:onClick="onClick"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
+        android:layout_gravity="end"
+        android:src="@drawable/invert_colors"
+        android:tint="@color/colorAccent"
+        android:background="@drawable/ripple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageButton
+        android:id="@+id/menu_full_screen"
+        android:onClick="onClick"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="end"
+        android:src="@drawable/more"
+        android:tint="@color/colorAccent"
+        android:background="@drawable/ripple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/chantWithSPController"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/playPauseChantWithSP"
+            android:src="@android:drawable/ic_media_pause"
+            android:onClick="onClick"
+            android:tint="@color/colorAccent"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/stopChantWithSP"
+            android:src="@drawable/stop"
+            android:onClick="onClick"
+            android:tint="@color/colorAccent"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/fullscreen_player_menu_list"
+        android:layout_gravity="end"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="180dp"
+        android:divider="@null"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"/>
+    <FrameLayout android:id="@+id/clipContainer"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout android:id="@+id/startPos"
+            android:padding="9dp"
+            android:layout_width="20dp"
+            android:layout_height="match_parent">
+            <View android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimaryDark"/>
+        </FrameLayout>
+
+        <FrameLayout android:id="@+id/endPos"
+            android:padding="9dp"
+            android:layout_width="20dp"
+            android:layout_height="match_parent" >
+            <View android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimaryDark"/>
+        </FrameLayout>
+
+
+        <TextView android:id="@+id/tStartPos"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:background="#80101080"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView android:id="@+id/tEndPos"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:background="#80101080"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="#B0FFFFFF"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText android:id="@+id/clipTitle"
+                android:gravity="center"
+                android:singleLine="true"
+                android:hint=" Set Title "
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageButton android:id="@+id/clip"
+                android:onClick="onClick"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ripple"
+                android:src="@drawable/send"
+                android:tint="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>
